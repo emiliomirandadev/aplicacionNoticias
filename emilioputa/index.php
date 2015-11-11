@@ -14,10 +14,10 @@ and open the template in the editor.
         
         <div class="login">
             <form action="noticias.php" method="POST">
-                <p>Usuario
-                    <input type="text" name="usuario" required class="campo">
-                </p><p>Contraseña
-                <input type="password" name="contrasenya" required class="campo">
+                <p>
+                    <input type="text" name="usuario" required class="campo" placeholder="Usuario">
+                </p><p>
+                <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña">
                 </p><input type="submit" value="Enviar" class="boton">
             </form>
         </div>

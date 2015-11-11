@@ -13,19 +13,19 @@
             <fieldset class="edita_noticia">
                 <legend> Actualiza noticia</legend>
            <form name="edit" action="funciones.php" method="POST"> 
-               titular<input type="text" name="titular">   autor<input type="text" name="autor">
+               Titular<input type="text" name="titular">
               Cuerpo<textarea rows="30" cols="130" name="cuerpo"></textarea><br>
-               fecha inicio<input type="date" name="fecha_inicio"><br>
-             fecha final<input type="date" name="fecha_final"><br>
+               Fecha inicio<input type="date" name="fecha_inicio"><br>
+             Fecha final<input type="date" name="fecha_final"><br>
            <br>
-               pendiente <input type="checkbox" name="pendiente"><br>
-               Selecciona grupo al que pertenece
+               Pendiente <input type="checkbox" name="pendiente" value=true checked><br>
+               Selecciona el grupo al que pertenece
                <select name="categoria">
-                   <option name"profesor">profesor
+                   <option name"profesor">Profesor
                    </option>
-                <option name"alumno">alumno
+                <option name"alumno">Alumno
                    </option>
-                   <option name"administrador">administrador
+                   <option name"administrador">Administrador
                    </option>
                </select>
 <input type="submit" value="actualizar"> 

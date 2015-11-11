@@ -8,16 +8,16 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
-        <title>inicio</title>
+        <title>Inicio</title>
     </head>
     <body>
         
         <div class="login">
             <form action="noticias.php" method="POST">
                 <p>Usuario
-                <input type="text" name="usuario" required>
+                    <input type="text" name="usuario" required class="campo">
                 </p><p>Contraseña
-                <input type="password" name="contrasenya" required>
+                <input type="password" name="contrasenya" required class="campo">
                 </p><input type="submit" value="Enviar" class="boton">
             </form>
         </div>

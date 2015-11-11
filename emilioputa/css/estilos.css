@@ -39,6 +39,11 @@ and open the template in the editor.
     font-size: 16px;
     color: #808080;
 }
+.campo {
+    border: 1px #b2fbb7 solid;
+    border-radius: 10px;
+    font-size: 14px;
+}
 body{
     background-color: #dafdd5;  
 }

@@ -24,10 +24,6 @@ and open the template in the editor.
     margin-right: 50px;
     padding: 10px;
     border-radius: 20px;
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 16px;
-    color: #808080;
 }
 .boton {
     padding: 10px;
@@ -46,19 +42,21 @@ and open the template in the editor.
 }
 body{
     background-color: #dafdd5;  
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 16px;
 }
 .titulo{
     font-size: 150%;
 }
 .noticia{
-    background-color: chartreuse;
-    position: absolute;
-    top:40%;
-    left: 10%;
-    right: 10%;
+    background-color: #91f883;
     width:80%;
-    height:300px;
-    margin-top:-150px;
-    border:1px solid #808080;
-    padding:5px;
+    height: 500px;
+    margin:auto;
+    margin-top: 20px;
+    border:3px solid #b2fbb7;
+    padding:20px;
+    border-radius: 100px;
+    text-align: center;
 }

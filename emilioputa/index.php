@@ -22,7 +22,7 @@ and open the template in the editor.
             </form>
         </div>
         <?php
-      
+        
         ?>
     </body>
 </html>

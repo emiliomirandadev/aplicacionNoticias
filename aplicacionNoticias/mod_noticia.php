@@ -2,13 +2,13 @@
     <head>
         <meta charset="UTF-8">
          <link rel="stylesheet" type="text/css" href="css/estilos.css">
-        <title>actualizar noticia</title>
+        <title>Administracion de noticias</title>
         <script language="javascript" src="WYSIWYG/source.js" type="text/javascript"></script>
 
     </head>
     <body>
         <div class="menu"></div>
-       <div class="titulo">Noticias </div>
+       <div class="titulo">Administración de noticias </div>
         <div class="editar_noticia">
             <fieldset class="edita_noticia">
                 <legend> Actualiza noticia</legend>
@@ -21,11 +21,11 @@
                Pendiente <input type="checkbox" name="pendiente" value=true checked><br>
                Selecciona el grupo al que pertenece
                <select name="categoria">
-                   <option name"profesor">Profesor
+                   <option name="profesor">Profesor
                    </option>
-                <option name"alumno">Alumno
+                <option name="alumno">Alumno
                    </option>
-                   <option name"administrador">Administrador
+                   <option name="administrador">Administrador
                    </option>
                </select>
 <input type="submit" value="actualizar"> 

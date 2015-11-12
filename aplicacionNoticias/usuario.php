@@ -2,11 +2,11 @@
     <head>
         <meta charset="UTF-8">
          <link rel="stylesheet" type="text/css" href="css/estilos.css">
-        <title>noticias actuales</title>
+        <title>Usuarios</title>
     </head>
     <body>
         <div class="menu"></div>
-       <div class="titulo">Noticias </div>
+       <div class="titulo">Administracion de usuarios</div>
         <div class="editar">
             <fieldset class="edita">
                 <legend> Actualiza usuario</legend>
@@ -18,11 +18,11 @@
               telefono <input type="number" name="tlf"> <br>
                Selecciona grupo al que pertenece
                <select name="grupo">
-                   <option name"profesor">profesor
+                   <option name= "profesor">profesor
                    </option>
-                <option name"alumno">alumno
+                <option name="alumno">alumno
                    </option>
-                   <option name"administrador">administrador
+                   <option name="administrador">administrador
                    </option>
                </select>
 <input type="submit" value="actualizar"> 

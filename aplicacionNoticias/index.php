@@ -12,15 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         
-        <div class="login">
-            <form action="noticias.php" method="POST">
-                <p>
-                    <input type="text" name="usuario" required class="campo" placeholder="Usuario">
-                </p><p>
-                <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña">
-                </p><input type="submit" value="Enviar" class="boton">
-            </form>
-        </div>
+        
         <?php
         
         ?>

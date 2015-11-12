@@ -29,11 +29,16 @@ and open the template in the editor.
     padding: 10px;
     border: 5px solid #61b065;
     border-radius: 20px;
-    background-color: #b4e3ad;
+    background-color: #dafdd5;
     font-family: monospace;
     font-weight: bold;
     font-size: 16px;
     color: #808080;
+}
+.boton:hover{
+    background-color: #b8f5b0;
+    border-color: #509054;
+    color: #000000;
 }
 .campo {
     border: 1px #b2fbb7 solid;

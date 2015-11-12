@@ -55,14 +55,14 @@ if ($usuario == "admin") {
         ?>>
             <form name="editar_usuario" action="usuario.php" method="POST"> 
 
-                <input type="submit" value="editar usuario "> 
+                <input type="submit" value="editar usuario " class="boton"> 
             </form>
         </div>   
 
 
         <div name="editar_noti">
             <form name="editar_noticia" action="mod_noticia.php" method="POST"> 
-                <input type="submit" value="editar noticia"> 
+                <input type="submit" value="editar noticia" class="boton"> 
             </form>
         </div>
         <div class="animcontainer">

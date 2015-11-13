@@ -13,11 +13,11 @@ and open the template in the editor.
     width:400px;
     margin:auto;
     margin-top: 200px;
-    border:6px solid #b2e2fb;
+    border:10px solid #b2e2fb;
     padding:20px;
     border-radius: 100px;
     text-align: center;
-    border-style: ridge;
+    
 }
 .login p{
     background-color: #d5edfd;
@@ -44,7 +44,7 @@ and open the template in the editor.
     cursor: pointer;
 }
 .campo {
-    border: 1px #b2fbb7 solid;
+    border: 0px ;
     border-radius: 10px;
     font-size: 14px;
 }
@@ -63,7 +63,7 @@ body{
     height: 500px;
     margin:auto;
     margin-top: 20px;
-    border:3px solid #b2e2fb;
+    border:10px solid #b2e2fb;
     padding:20px;
     border-radius: 100px;
     text-align: center;
@@ -81,4 +81,7 @@ h2{
 
 .menu{
  float:right;
+}
+table.tabla_usuarios{
+    width: 100%;
 }

@@ -65,6 +65,12 @@ if ($usuario == "admin") {
                 <input type="submit" value="editar noticia" class="boton"> 
             </form>
         </div>
+           <div name="configuracion">
+            <form name="config" action="config.php" method="POST"> 
+                <input type="submit" value="configuracion" class="boton"> 
+            </form>
+        </div>
+        
         <div class="animcontainer">
             <img class="move" id="imB" src="imagenes/logoIESAguadulce.gif">
         </div>

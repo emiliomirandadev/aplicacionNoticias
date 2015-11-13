@@ -5,7 +5,12 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php
-$usuario = $_POST['usuario'];
+if(isset($_POST['usuario'])){
+    $usuario = $_POST['usuario'];
+}else{
+    $usuario ="anonimo";
+}
+
 
 
 if ($usuario == "admin") {

@@ -8,7 +8,7 @@
 
 
         <?php
-        include 'conexion.php';
+        include 'funciones/conexion.php';
 
         $con = conexion();
         $consulta = "select correo,nombre,apellido,telefono,grupo,curso from usuario";

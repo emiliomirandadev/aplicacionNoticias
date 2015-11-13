@@ -11,8 +11,8 @@ and open the template in the editor.
         <title>Inicio</title>
     </head>
     <body>
-        
-        
+        hola tetes
+        fsdfdsf
         <?php
         
         ?>

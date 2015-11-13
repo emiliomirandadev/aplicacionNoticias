@@ -18,3 +18,5 @@ function conexion() {
 }
 
 ?>
+  </body>
+</html>

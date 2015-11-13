@@ -1,22 +1,33 @@
-<?php
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        <title>Usuarios</title>
+    </head>
+    <body>
 
-include 'conexion.php';
 
-$con = conexion();
-$consulta = "select correo,nombre,apellido,telefono,grupo,curso from usuario";
+        <?php
+        include 'conexion.php';
+
+        $con = conexion();
+        $consulta = "select correo,nombre,apellido,telefono,grupo,curso from usuario";
 
 
-$resultado = $con->query($consulta);
-$r = array();
-echo "<table border='1'>";
-while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-    echo "<tr>";
-    foreach ($row as $key => $value) {
+        $resultado = $con->query($consulta);
+        $r = array();
+        echo "<table border='1'>";
+        while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr>";
+            foreach ($row as $key => $value) {
 
-        echo "<td> $value </td> ";
-    }
-    echo "<td> <button value='Modificar'></button> <button value='editar'></button></td>";
-    echo "</tr>";
-}
-echo "</table>";
-?>
+                echo "<td> $value </td> ";
+            }
+
+            echo "<td><form name='mod_usuario' action='usuario.php' method='POST'> <input type='submit' value='Modificar'></form> <form name='borrar_usuario' action='borrar_usuario.php' method='POST'><input type='submit' value='borrar'></form></td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        ?>
+    </body>
+</html>

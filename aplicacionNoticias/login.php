@@ -11,18 +11,18 @@ and open the template in the editor.
         <title>Inicio de sesión</title>
     </head>
     <body>
-        
+
         <div class="login">
-            <form action="noticias.php" method="POST">
+            <form action="funciones/comprobar_login.php" method="POST">
                 <p>
                     <input type="text" name="usuario" required class="campo" placeholder="Usuario">
-                </p><p>
-                <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña">
+                </p>
+                <p>
+                    <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña">
                 </p><input type="submit" value="Enviar" class="boton">
             </form>
         </div>
         <?php
-        
         ?>
     </body>
 </html>

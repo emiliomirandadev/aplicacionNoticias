@@ -6,6 +6,8 @@ and open the template in the editor.
 -->
 
 <?php
+$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
+header("refresh:10; url=$self");
 include ('funciones/listar_noticias.php');
 if (isset($_POST['usuario'])) {
     $usuario = $_POST['usuario'];
@@ -79,8 +81,8 @@ if ($usuario == "admin") {
             </form>
         </div>
 
-        <div class="animcontainer">
-            <img class="move" id="imB" src="imagenes/logoIESAguadulce.gif">
+        <div >
+            <img src="imagenes/logoIESAguadulce.gif">
         </div>
 
 

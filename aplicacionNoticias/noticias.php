@@ -4,11 +4,13 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
 <?php
-if(isset($_POST['usuario'])){
+include ('funciones/listar_noticias.php');
+if (isset($_POST['usuario'])) {
     $usuario = $_POST['usuario'];
-}else{
-    $usuario ="anonimo";
+} else {
+    $usuario = "anonimo";
 }
 
 
@@ -38,17 +40,18 @@ if ($usuario == "admin") {
     </head>
     <body>
         <div class="menu">
-            
+
             Estas conectado como <?php echo $usuario; ?>
-            <button onclick="window.location='index.php'">desconectarse </button>
-            
-            
+            <button onclick="window.location = 'index.php'">desconectarse </button>
+
+
         </div>
         <div class="titulo">Noticias </div>
-        
+
         <div class="noticia">
             <h2>noticia fresca</h2>
             <p>   El pasado miércoles 4 de noviembre se procedió a la defensa de la tesis doctoral "Reacciones Electroquímicas Modelo en la Interfaz Líquido Iónico-Electrodo Monocristalino de Platino" por parte de Andrea del Pilar Sandoval Rojas en la Universidad Nacional de Colombia. La tesis ha sido dirigida por los profesores Juan Miguel Feliu Martínez y Marco Fidel Suarez Herrera. <p>
+            <p><?php echo mostrar_noticias() ?></p>
         </div>
 
 
@@ -70,18 +73,18 @@ if ($usuario == "admin") {
                 <input type="submit" value="editar noticia" class="boton"> 
             </form>
         </div>
-           <div name="configuracion">
+        <div name="configuracion">
             <form name="config" action="config.php" method="POST"> 
                 <input type="submit" value="configuracion" class="boton"> 
             </form>
         </div>
-        
+
         <div class="animcontainer">
             <img class="move" id="imB" src="imagenes/logoIESAguadulce.gif">
         </div>
 
 
     </div>
-<?php ?>
+    <?php ?>
 </body>
 </html>

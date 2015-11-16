@@ -1,15 +1,21 @@
 <?php
 
 include ('conexion.php');
+include ('funciones.php');
 $con = conexion();
-$consulta_usuario = "select * from usuario where correo =" . $_POST['usuario'] . "and passwd =" . $_POST['contrasenya'] . "";
- $resultado = $con->query($consulta_usuario);
+$usuario = $_POST['usuario'];
+$pass = $_POST['contrasenya'];
 
-if ( mysql_num_rows($resultado) == 1) {
+$consulta_usuario = "select * from usuario where correo ='$usuario' and passwd ='$pass'";
+$resultado = $con->query($consulta_usuario);
+$num_rows = $resultado->fetchColumn();
+if ($num_rows == 1) {
     $datos_usuario = mysql_fetch_object($resultado);
-    setcookie("login_guardado", $datos_usuario->correo, time() + (60 * 60 * 24 * 365));
+    setcookie("login_guardado", $datos_usuario->correo, 360);
+    setcookie("nombre", "prueba", 360);
 }
 
+volver();
 
 /*
  * To change this license header, choose License Headers in Project Properties.

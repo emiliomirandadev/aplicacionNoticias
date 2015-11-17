@@ -11,10 +11,12 @@ and open the template in the editor.
         <title>Inicio</title>
     </head>
     <body>
-        hola tetes
-        fsdfdsf
+      
         <?php
-        
+        include ('noticias.php');
+        if(isset($_COOKIE['conexion'])){
+            volver();
+        }
         ?>
     </body>
 </html>

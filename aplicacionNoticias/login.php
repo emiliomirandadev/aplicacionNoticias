@@ -11,7 +11,8 @@ and open the template in the editor.
         <title>Inicio de sesión</title>
     </head>
     <body>
-
+        
+      
         <div class="login">
             <form action="funciones/comprobar_login.php" method="POST">
                 <p>
@@ -22,7 +23,8 @@ and open the template in the editor.
                 </p><input type="submit" value="Enviar" class="boton">
             </form>
         </div>
-        <?php
-        ?>
+
+
+     
     </body>
 </html>

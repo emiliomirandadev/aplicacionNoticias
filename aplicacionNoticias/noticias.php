@@ -6,14 +6,13 @@ and open the template in the editor.
 -->
 
 <?php
+header("Content-Type: text/html;charset=utf-8");
+$usuario= $_COOKIE['conexion'];
 $self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
 header("refresh:10; url=$self");
 include ('funciones/listar_noticias.php');
-if (isset($_POST['usuario'])) {
-    $usuario = $_POST['usuario'];
-} else {
-    $usuario = "anonimo";
-}
+
+
 
 
 
@@ -29,7 +28,7 @@ if ($usuario == "admin") {
 ?>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
         <title>noticias actuales</title>
         <style>.move {-webkit-animation: anim2 ease-in-out 3s infinite alternate; }
@@ -44,7 +43,7 @@ if ($usuario == "admin") {
         <div class="menu">
 
             Estas conectado como <?php echo $usuario; ?>
-            <button onclick="window.location = 'index.php'">desconectarse </button>
+            <button onclick="window.location = 'login.php'">desconectarse </button>
 
 
         </div>

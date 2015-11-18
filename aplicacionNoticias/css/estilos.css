@@ -88,3 +88,14 @@ h2{
 table.tabla_usuarios{
     width: 100%;
 }
+.usu_error{
+    background-color: #fd8c8c;
+    width:400px;
+    margin:auto;
+    margin-top: 10px;
+    border:5px solid #d80404;
+    padding:5px;
+    border-radius: 20px;
+    text-align: center;
+    color: #d80404;
+}

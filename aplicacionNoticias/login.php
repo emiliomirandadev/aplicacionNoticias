@@ -11,10 +11,10 @@ and open the template in the editor.
         <title>Inicio de sesión</title>
     </head>
     <body>
-        
-      
+
+
         <div class="login">
-            <form action="funciones/comprobar_login.php" method="POST">
+            <form method="POST">
                 <p>
                     <input type="text" name="usuario" required class="campo" placeholder="Usuario">
                 </p>
@@ -24,7 +24,18 @@ and open the template in the editor.
             </form>
         </div>
 
+        <?php
+        include 'funciones/funciones.php';
+        if (isset($_REQUEST['usuario']) && isset($_REQUEST['contrasenya'])) {
+            if (buscar_usuario($_REQUEST['usuario'], $_REQUEST['contrasenya'])) {
+                session_start();
+                $_SESSION['usuario'] = $_REQUEST['campousuario'];
+                $_SESSION['clave'] = $_REQUEST['campoclave'];
+            } else {
+                print "<div class=\"usu_error\">El usuario o contraseña es incorrecto</div>";
+            }
+        }
+        ?>
 
-     
     </body>
 </html>

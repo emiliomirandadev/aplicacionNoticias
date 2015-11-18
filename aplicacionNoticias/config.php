@@ -12,6 +12,7 @@
         <div id="demo"></div>
         <script>
             function loadUsuario() {
+                
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function () {
                     if (xhttp.readyState === 4 && xhttp.status === 200) {
@@ -33,6 +34,7 @@
             }
               
             function BorrarNoticia(id) {
+                
                 var xhttp = new XMLHttpRequest();
                 var url='funciones/borrar_noticia.php?id='+id;
                 xhttp.onreadystatechange = function () {

@@ -37,7 +37,7 @@ echo "</table>";
             echo "<td> $value </td> ";
         }
 
-        echo "<td> <button class='boton' type='button' onclick='BorrarNoticia()'>".$value['titular']." </button></td>";
+        echo "<td> <button class='boton_borrar' type='button' onclick='BorrarNoticia()'>".$value['titular']." </button></td>";
         echo "</tr>";
     }
   

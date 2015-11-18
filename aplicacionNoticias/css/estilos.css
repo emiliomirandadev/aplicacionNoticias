@@ -14,7 +14,7 @@ and open the template in the editor.
     text-align: center;
 
 }
-.tabla_usuarios{
+.tabla_usuarios,.tabla_noticias{
 
 
     background-color: #d5edfd;
@@ -101,7 +101,7 @@ h2{
 .menu{
     float:right;
 }
-table.tabla_usuarios{
+table.tabla_usuarios,table.tabla_noticias{
     width: 100%;
 }
 .usu_error{

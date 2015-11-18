@@ -28,7 +28,7 @@
                         document.getElementById("demo").innerHTML = xhttp.responseText;
                     }
                 };
-                xhttp.open("GET", "listar_noticias_modificar.php", true);
+                xhttp.open("GET", "funciones/listar_noticias_modificar.php", true);
                 xhttp.send();
             }
         </script>

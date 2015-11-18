@@ -7,7 +7,7 @@ and open the template in the editor.
 
 <?php
 header("Content-Type: text/html;charset=utf-8");
-$usuario= $_COOKIE['conexion'];
+$usuario = $_COOKIE['conexion'];
 $self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
 header("refresh:10; url=$self");
 include ('funciones/listar_noticias.php');
@@ -50,9 +50,8 @@ if ($usuario == "admin") {
         <div class="titulo">Noticias </div>
 
         <div class="noticia">
-            <h2>noticia fresca</h2>
-            <p>   El pasado miércoles 4 de noviembre se procedió a la defensa de la tesis doctoral "Reacciones Electroquímicas Modelo en la Interfaz Líquido Iónico-Electrodo Monocristalino de Platino" por parte de Andrea del Pilar Sandoval Rojas en la Universidad Nacional de Colombia. La tesis ha sido dirigida por los profesores Juan Miguel Feliu Martínez y Marco Fidel Suarez Herrera. <p>
             <p><?php echo mostrar_noticias() ?></p>
+
         </div>
 
 

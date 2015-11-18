@@ -9,7 +9,7 @@
  * Funciona tanto en IE como en FireFox
  *
  * Este script ha sido desarrollado integramente
- * por Iván Arias (arias@elleondeoro.com)
+ * por Ivï¿½n Arias (arias@elleondeoro.com)
  *
  * Vista www.php-hispano.net y #php_para_torpes (iRC-Hispano)
  *
@@ -73,7 +73,7 @@ function makeWysiwyg (element) {
     '+addSeparator()+'\
     '+addImage("link.gif", edit, "createlink", "Insertar enlace")+'\
     '+addImage("unlink.gif", edit, "unlink", "Quitar enlace")+'\
-    '+addImage("image.gif", edit, "insertimage", "Añadir imagen")+'\
+    '+addImage("image.gif", edit, "insertimage", "Aï¿½adir imagen")+'\
     '+addSeparator()+'\
     '+addImage("bullist.gif", edit, "insertunorderedlist", "Lista sin ordenar")+'\
     '+addImage("numlist.gif", edit, "insertorderedlist", "Lista sin ordenar")+'\
@@ -111,7 +111,7 @@ function makeWysiwyg (element) {
     '+addEmoticon('smile.gif', edit, "Sonriente")+'\
     '+addEmoticon('shocked.gif', edit, "Sorprendido")+'<br/>\
     '+addEmoticon('tongue.gif', edit, "Sacando la lengua")+'\
-    '+addEmoticon('wink.gif', edit, "Guiñado el ojo")+'\
+    '+addEmoticon('wink.gif', edit, "Guiï¿½ado el ojo")+'\
     </td></tr></table>';
 
   if (isIE)

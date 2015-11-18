@@ -7,7 +7,10 @@ and open the template in the editor.
     Created on : 05-nov-2015, 9:32:07
     Author     : Pamy
 */
-
+.noticia img{
+     width:30%;
+     height: 30%;
+}
 .login{
     background-color: #35aefc;
     width:400px;

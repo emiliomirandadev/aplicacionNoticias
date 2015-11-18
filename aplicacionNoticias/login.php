@@ -29,8 +29,8 @@ and open the template in the editor.
         if (isset($_REQUEST['usuario']) && isset($_REQUEST['contrasenya'])) {
             if (buscar_usuario($_REQUEST['usuario'], $_REQUEST['contrasenya'])) {
                 session_start();
-                $_SESSION['usuario'] = $_REQUEST['campousuario'];
-                $_SESSION['clave'] = $_REQUEST['campoclave'];
+                $_SESSION['usuario'] = $_REQUEST['usuario'];
+                $_SESSION['clave'] = $_REQUEST['contrasenya'];
             } else {
                 print "<div class=\"usu_error\">El usuario o contraseña es incorrecto</div>";
             }

@@ -13,13 +13,28 @@ function volver() {
 function buscar_usuario($nombre, $pass) {
     $con=  conexion();
     /* La busqueda en la base de datos se realiza de este modo para evitar las inyecciones sql */
-    $query = ("SELECT correo, passwd FROM usuario  WHERE correo = '$nombre' and passd='$pass'");
-    $resultado=$con->query($query);
-    $nr=$resultado->num_rows;
+    $query = ("SELECT correo, passwd FROM usuario  WHERE correo = '$nombre' and passwd='$pass'");
+    $resultado = $con->query($query);
+    $nr=  $resultado->rowCount();
 
     if ($nr == 1) {
         return false;
     } else if ($nr == 0) {
         return true;
     }
+//    $result = mysql_query("SELECT * from usuarios where Username='" . $usuario . "'");
+//
+//if ($row = mysql_fetch_array($result)) {
+//    if ($row['Password'] == $pass) {
+//        session_start();
+//        $_SESSION['usuario'] = $usuario;
+//        header("Location: contenido.php");
+//    } else {
+//        header("Location: index.html");
+//        exit();
+//    }
+//} else {
+//    header("Location: index.html");
+//    exit();
+//}
 }

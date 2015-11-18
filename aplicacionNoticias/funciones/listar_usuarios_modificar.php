@@ -6,8 +6,8 @@
  * and open the template in the editor.
  */
 
-function mostrar_usuarios_mod() {
-    include 'funciones/conexion.php';
+
+    include 'conexion.php';
 
     $con = conexion();
     $consulta = "select correo,nombre,apellido,telefono,grupo,curso from usuario";
@@ -27,4 +27,4 @@ function mostrar_usuarios_mod() {
         echo "</tr>";
     }
     echo "</table>";
-}
+

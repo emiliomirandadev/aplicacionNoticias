@@ -7,9 +7,25 @@ and open the template in the editor.
     Created on : 05-nov-2015, 9:32:07
     Author     : Pamy
 */
+.cabecera_config{
+    background-color: #35aefc;  border:10px solid #b2e2fb;
+    padding:20px;
+    border-radius: 100px;
+    text-align: center;
+    
+}
+.tabla_usuarios{
+    
+
+    background-color: #d5edfd;
+  margin-top: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
 .noticia img{
-     width:30%;
-     height: 30%;
+    width:30%;
+    height: 30%;
 }
 .login{
     background-color: #35aefc;
@@ -22,7 +38,7 @@ and open the template in the editor.
     text-align: center;
 
 }
-.login p{
+.login p,.cabecera_config{
     background-color: #d5edfd;
     margin-left: 50px;
     margin-right: 50px;

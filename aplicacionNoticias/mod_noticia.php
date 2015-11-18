@@ -12,7 +12,7 @@
         <div class="editar_noticia">
             <fieldset class="edita_noticia">
                 <legend> Actualiza noticia</legend>
-           <form name="edit" action="funciones.php" method="POST"> 
+                <form name="edit" action="funciones/insertar_noticia.php" method="POST"> 
                Titular<input type="text" name="titular">
               Cuerpo<textarea rows="30" cols="130" name="cuerpo"></textarea><br>
                Fecha inicio<input type="date" name="fecha_inicio"><br>

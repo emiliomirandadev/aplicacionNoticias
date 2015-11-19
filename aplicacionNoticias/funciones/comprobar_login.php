@@ -11,7 +11,7 @@ $resultado = $con->query($query);
 $nr = $resultado->rowCount();
 
 if ($nr == 1) {
-   echo "es correcto";
+   echo "<div class=\"usu_corre\">Redirigiendo la página...</div>";
     session_start();
     $_SESSION['usuario'] = $usuario;
     $_SESSION['clave'] = $pass;
@@ -20,7 +20,7 @@ if ($nr == 1) {
     <script>document.location.href='./noticias.php';</script>
     <?php
 } else if ($nr == 0) {
-   echo "<div class=\"usu_error\">No es correcto</div>";
+   echo "<div class=\"usu_error\">El usuario o contraseña no es correcto</div>";
 }
 ?>
 

@@ -114,3 +114,14 @@ table.tabla_usuarios,table.tabla_noticias{
     text-align: center;
     color: #d80404;
 }
+.usu_corre{
+    background-color: #9cf7ac;
+    width:400px;
+    margin:auto;
+    margin-top: 10px;
+    border:5px solid #02ab21;
+    padding:5px;
+    border-radius: 20px;
+    text-align: center;
+    color: #02ab21;
+}

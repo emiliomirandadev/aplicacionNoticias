@@ -18,23 +18,9 @@ function buscar_usuario($nombre, $pass) {
     $nr=  $resultado->rowCount();
 
     if ($nr == 1) {
-        return false;
-    } else if ($nr == 0) {
         return true;
+    } else if ($nr == 0) {
+        return false;
     }
-//    $result = mysql_query("SELECT * from usuarios where Username='" . $usuario . "'");
-//
-//if ($row = mysql_fetch_array($result)) {
-//    if ($row['Password'] == $pass) {
-//        session_start();
-//        $_SESSION['usuario'] = $usuario;
-//        header("Location: contenido.php");
-//    } else {
-//        header("Location: index.html");
-//        exit();
-//    }
-//} else {
-//    header("Location: index.html");
-//    exit();
-//}
+
 }

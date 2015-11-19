@@ -14,7 +14,7 @@ and open the template in the editor.
 
 
         <div class="login">
-            <form method="POST">
+            <form method="POST" action="funciones/comprobar_login.php" >
                 <p>
                     <input type="text" name="usuario" required class="campo" placeholder="Usuario">
                 </p>
@@ -30,7 +30,7 @@ and open the template in the editor.
             if (buscar_usuario($_REQUEST['usuario'], $_REQUEST['contrasenya'])) {
                 session_start();
                 $_SESSION['usuario'] = $_REQUEST['usuario'];
-                $_SESSION['clave'] = $_REQUEST['contrasenya'];
+                $_SESSION['clave'] = $_REQUEST['contrasenya'];   
             } else {
                 print "<div class=\"usu_error\">El usuario o contraseña es incorrecto</div>";
             }

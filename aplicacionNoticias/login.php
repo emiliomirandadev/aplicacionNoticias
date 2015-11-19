@@ -9,31 +9,33 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
         <title>Inicio de sesión</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
     </head>
     <body>
 
 
         <div class="login">
             <p>
-                <input type="text" name="usuario" required class="campo" placeholder="Usuario">
+                <input type="text" name="usuario" required class="campo" placeholder="Usuario" id="usuario">
             </p>
             <p>
-                <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña">
-            </p><input type="button" value="Enviar" class="boton" onclick="LoadComprobar(usuario, contrasenya)">
+                <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña" id="contrasenya">
+            </p><input type="button" value="Enviar" class="boton" onclick="LoadComprobar()">
 
         </div>
         <div id="demo"></div>
         <script>
-            function LoadComprobar(usuario, contrasenya) {
-                var xhttp = new XMLHttpRequest();
-                var url = 'funciones/comprobar_login?usuario=' + usuario+'contrasenya='+contrasenya;
-                xhttp.onreadystatechange = function () {
-                    if (xhttp.readyState === 4 && xhttp.status === 200) {
-                        document.getElementById("demo").innerHTML = xhttp.responseText;
-                    }
-                };
-                xhttp.open("POST", url, true);
-                xhttp.send();
+            function LoadComprobar() {
+                var usuario = $('#usuario').val();
+                var contrasenya = $('#contrasenya').val();
+                $.ajax({// incio petición
+                    type: "POST", //Cuando se haya enviado un formulario
+                    url: "funciones/comprobar_login.php", //se invoca el archivo infoclientes.php
+                    data: {nomusu: usuario, nomcon: contrasenya}													    //asigno el campo a la variable de peticion sql
+                }).done(function (result) {												 //recibo el resulta
+                    $("#demo").html(result);
+                    
+                });
             }
         </script>
         <?php

@@ -2,7 +2,7 @@
 
 include ('conexion.php');
 
-function mostrar_noticias() {
+
     header("Content-Type: text/html;charset=utf-8");
     $con = conexion();
     mysql_query("SET NAMES 'utf8'");
@@ -14,7 +14,7 @@ function mostrar_noticias() {
     while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
         $lista = $row['titular'] . " " . $row['cuerpo'];
     }
-    return $lista;
-}
+   echo $lista;
+
 
 

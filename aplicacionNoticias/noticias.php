@@ -8,9 +8,9 @@ and open the template in the editor.
 <?php
 header("Content-Type: text/html;charset=utf-8");
 $usuario = $_COOKIE['conexion_usuario'];
-$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
-header("refresh:10; url=$self");
-include ('funciones/listar_noticias.php');
+//$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
+//header("refresh:10; url=$self");
+//include ('funciones/listar_noticias.php');
 
 
 
@@ -28,6 +28,23 @@ if ($usuario == "admin") {
 ?>
 <html>
     <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+    function cargarDiv()
+    {
+        $.ajax({// incio petición
+            type: "POST", //Cuando se haya enviado un formulario
+            url: "funciones/listar_noticias.php", //se invoca el archivo infoclientes.php
+            //asigno el campo a la variable de peticion sql
+        }).done(function (result) {												 //recibo el resulta
+            $("#noti").html(result);
+
+        });
+    }
+    setInterval(cargarDiv(), 1);
+        </script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
         <title>noticias actuales</title>
@@ -48,10 +65,8 @@ if ($usuario == "admin") {
 
         </div>
         <div class="titulo">Noticias </div>
-
-        <div class="noticia">
-            <p><?php echo mostrar_noticias() ?></p>
-
+        <div id="noti" class="noticia">
+          
         </div>
 
 

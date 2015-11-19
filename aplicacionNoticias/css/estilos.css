@@ -75,19 +75,23 @@ body{
 .titulo{
     font-size: 150%;
 }
+
 .noticia{
+    
+    color:white;
     background-color: #35aefc;
     width:80%;
     height:60%;
     margin:auto;
     margin-top: 20px;
     border:10px solid #b2e2fb;
-    padding:20px;
+    padding:30px;
     border-radius: 100px;
     text-align: center;
     padding-top: 3%;
-    text-align: justify;
+    text-align: center;
     overflow:auto;
+    
 }
 p{
     margin:50px;

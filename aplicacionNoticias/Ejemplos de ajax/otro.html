@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+        <script>
+            function infoclientes() {
+                var nombre = $('#ciudad').val();										    // campo del formulario que voy a consultar
+                $.ajax({// incio petición
+                    type: "POST", //Cuando se haya enviado un formulario
+                    url: "funcion2.php", //se invoca el archivo infoclientes.php
+                    data: {nomcli: nombre}													    //asigno el campo a la variable de peticion sql
+                }).done(function (result) {												 //recibo el resulta
+                    $("#info").html(" La ciudad es " + result);
+                    
+                });
+            }
+        </script>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" name="nombre" id="nombre" /><td>
+            </tr>
+            <tr>
+                <td>Ciudad:</td>
+                <td><input type="text" name="ciudad" id="ciudad" /><td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" name="submit" id="submit" value="Consulta" onclick = "infoclientes()" />
+                </td>
+            </tr>
+        </table>
+        <div id="info"></div>
+
+    </body>
+</html>

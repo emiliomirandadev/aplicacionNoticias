@@ -14,27 +14,39 @@ and open the template in the editor.
 
 
         <div class="login">
-            <form method="POST" action="funciones/comprobar_login.php" >
-                <p>
-                    <input type="text" name="usuario" required class="campo" placeholder="Usuario">
-                </p>
-                <p>
-                    <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña">
-                </p><input type="submit" value="Enviar" class="boton">
-            </form>
-        </div>
+            <p>
+                <input type="text" name="usuario" required class="campo" placeholder="Usuario">
+            </p>
+            <p>
+                <input type="password" name="contrasenya" required class="campo" placeholder="Contraseña">
+            </p><input type="button" value="Enviar" class="boton" onclick="LoadComprobar(usuario, contrasenya)">
 
-        <?php
-        include 'funciones/funciones.php';
-        if (isset($_REQUEST['usuario']) && isset($_REQUEST['contrasenya'])) {
-            if (buscar_usuario($_REQUEST['usuario'], $_REQUEST['contrasenya'])) {
-                session_start();
-                $_SESSION['usuario'] = $_REQUEST['usuario'];
-                $_SESSION['clave'] = $_REQUEST['contrasenya'];   
-            } else {
-                print "<div class=\"usu_error\">El usuario o contraseña es incorrecto</div>";
+        </div>
+        <div id="demo"></div>
+        <script>
+            function LoadComprobar(usuario, contrasenya) {
+                var xhttp = new XMLHttpRequest();
+                var url = 'funciones/comprobar_login?usuario=' + usuario+'contrasenya='+contrasenya;
+                xhttp.onreadystatechange = function () {
+                    if (xhttp.readyState === 4 && xhttp.status === 200) {
+                        document.getElementById("demo").innerHTML = xhttp.responseText;
+                    }
+                };
+                xhttp.open("POST", url, true);
+                xhttp.send();
             }
-        }
+        </script>
+        <?php
+//        include 'funciones/funciones.php';
+//        if (isset($_REQUEST['usuario']) && isset($_REQUEST['contrasenya'])) {
+//            if (buscar_usuario($_REQUEST['usuario'], $_REQUEST['contrasenya'])) {
+//                session_start();
+//                $_SESSION['usuario'] = $_REQUEST['usuario'];
+//                $_SESSION['clave'] = $_REQUEST['contrasenya'];   
+//            } else {
+//                print "<div class=\"usu_error\">El usuario o contraseña es incorrecto</div>";
+//            }
+//        }
         ?>
 
     </body>

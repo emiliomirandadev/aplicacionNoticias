@@ -12,9 +12,9 @@ include ('conexion.php');
 
 
     while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        $lista = $row['titular'] . " " . $row['cuerpo'];
+        echo "<h1>". $row['titular']."</h1>" . "<br> " . $row['cuerpo']."<br>";
     }
-   echo $lista;
+ 
 
 
 

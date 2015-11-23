@@ -13,7 +13,7 @@
                         document.getElementById("demo").innerHTML = xhttp.responseText;
                     }
                 };
-                xhttp.open("GET", "funciones/listar_usuarios_modificar.php", true);
+                xhttp.open("GET", "listar_usuarios_modificar.php", true);
                 xhttp.send();
             }
             function loadNoticia() {
@@ -23,14 +23,14 @@
                         document.getElementById("demo").innerHTML = xhttp.responseText;
                     }
                 };
-                xhttp.open("GET", "funciones/listar_noticias_modificar.php", true);
+                xhttp.open("GET", "listar_noticias_modificar.php", true);
                 xhttp.send();
             }
               
             function BorrarNoticia(id) {
                 
                 var xhttp = new XMLHttpRequest();
-                var url='funciones/borrar_noticia.php?id='+id;
+                var url='borrar_noticia.php?id='+id;
                 xhttp.onreadystatechange = function () {
                     if (xhttp.readyState === 4 && xhttp.status === 200) {
                         document.getElementById("demo").innerHTML = xhttp.responseText;

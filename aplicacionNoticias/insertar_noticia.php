@@ -13,8 +13,9 @@ $f_ini=$_POST['fecha_inicio'];
 $f_fin=$_POST['fecha_final'];
 $pendiente=$_POST['pendiente'];
 $categoria=$_POST['categoria'];
-$autor=$_COOKIE['conexion'];
+$autor=$_COOKIE['conexion_usuario'];
 $insertar ="insert into noticia (titular,cuerpo,fecha_i,fecha_f,autor,pendiente,categoria) values('$titulo','$cuerpo','$f_ini','$f_fin','$autor','$pendiente','$categoria')";
 
 echo $insertar;
 $resultado=$con->query($insertar);
+header('Location: mod_noticia.php');

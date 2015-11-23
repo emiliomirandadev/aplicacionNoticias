@@ -3,7 +3,7 @@
 include ('funciones.php');
 $usuario = $_POST['nomusu'];
 $pass = $_POST['nomcon'];
-$pass_cifrada=  md5($pass);
+$pass_cifrada = md5($pass);
 $con = conexion();
 /* La busqueda en la base de datos se realiza de este modo para evitar las inyecciones sql */
 $query = ("SELECT correo, passwd,grupo FROM usuario  WHERE correo = '$usuario' and passwd='$pass_cifrada'");
@@ -15,6 +15,7 @@ $nr = $resultado->rowCount();
 if ($nr == 1) {
     foreach ($resultado as $key => $value) {
         $grupo = $value['grupo'];
+        
     }
     echo "<div class=\"usu_corre\">Redirigiendo la página...</div>";
     //session_start();
@@ -22,8 +23,12 @@ if ($nr == 1) {
     //$_SESSION['clave'] = $pass;
     setcookie("conexion_usuario", $usuario, time() + 3600, "/");
     setcookie("conexion_grupo", $grupo, time() + 3600, "/");
+    session_start();
+    $_SESSION['usuario'] = $usuario;
+    $_SESSION['clave'] = $pass;
+    $_SESSION['grupo']=$grupo;
     ?>
-    <script>document.location.href = './noticias.php';</script>
+    <script>document.location.href = 'noticias.php';</script>
     <?php
 
 } else if ($nr == 0) {

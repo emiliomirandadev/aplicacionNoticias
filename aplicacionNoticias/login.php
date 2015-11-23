@@ -9,8 +9,20 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
         <title>Inicio de sesión</title>
-        <script src=jq/code.jquery.com_jquery-latest.js"></script>
-        <script src="ajax/funciones_ajax.js"></script>
+        <script src="jq/code.jquery.com_jquery-latest.js"></script>
+        <script src="jq/ajax.googleapis.com_ajax_libs_jquery_1.8.3_jquery.min.js"></script>
+        <script>  function LoadComprobar() {
+                var usuario = $('#usuario').val();
+                var contrasenya = $('#contrasenya').val();
+                $.ajax({// incio petición
+                    type: "POST", //Cuando se haya enviado un formulario
+                    url: "comprobar_login.php", //se invoca el archivo infoclientes.php
+                    data: {nomusu: usuario, nomcon: contrasenya}													    //asigno el campo a la variable de peticion sql
+                }).done(function (result) {												 //recibo el resulta
+                    $("#demo").html(result);
+                    
+                });
+            }</script>
     </head>
     <body>
 

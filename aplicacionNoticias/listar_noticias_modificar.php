@@ -20,8 +20,8 @@ echo "<table class='tabla_noticias' border='1'>";
 
 while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
     echo "<tr>";
-    echo "<td> <button name='hola' class='boton' type='button' onclick='BorrarNoticia(".$row["id"].")'>Borrar</button></td>";
-
+    echo "<td> <button name='borrnoticia' class='boton' type='button' onclick='BorrarNoticia(".$row["id"].")'>Borrar</button></td>";
+    echo "<td> <button name='modnoticia' class='boton' type='button' onclick='ModNoticia(".$row["id"].")'>Modificar</button></td>";
     echo "<td>" . $row["titular"] . "</td>";
      echo "<td>" . $row["autor"] . "</td>";
     echo "</tr>";

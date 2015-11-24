@@ -75,13 +75,18 @@ body{
 .titulo{
     font-size: 150%;
 }
-
+.noti{
+    height: 40px;
+}
+marquee{
+      height: 500px;
+}
 .noticia{
     
     color:white;
     background-color: #35aefc;
     width:80%;
-    height:60%;
+    
     margin:auto;
     margin-top: 20px;
     border:10px solid #b2e2fb;

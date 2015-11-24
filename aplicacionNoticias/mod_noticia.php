@@ -20,7 +20,7 @@
                 <legend> Actualiza noticia</legend>
                 <form name="edit" action="insertar_noticia.php" method="POST"> 
                     Titular<input type="text" name="titular">
-                    Cuerpo<textarea rows="30" cols="130" name="cuerpo"></textarea><br>
+                    Cuerpo<textarea rows="30" cols="130" name="cuerpo"></textarea><br><br>
                     Fecha inicio<input type="date" name="fecha_inicio"><br>
                     Fecha final<input type="date" name="fecha_final"><br>
                     <br>

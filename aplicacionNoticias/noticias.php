@@ -12,6 +12,10 @@ $grupo = $_COOKIE['conexion_grupo'];
 //$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
 //header("refresh:10; url=$self");
 //include ('funciones/listar_noticias.php');
+if(!isset($_COOKIE['conexion_usuario'])){
+    header('Location: login.php');
+}
+
 ?>
 <html>
     <head>
@@ -29,7 +33,7 @@ $grupo = $_COOKIE['conexion_grupo'];
                 });
 
             }
-            setInterval(cargarDiv(), 1);
+            cargarDiv();
         </script>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -54,38 +58,16 @@ $grupo = $_COOKIE['conexion_grupo'];
         </script> 
     </head>
     <body>
-        <div class="menu">
-
-            Estas conectado como <?php echo $usuario; ?>
-            <button onclick="window.location = 'login.php'">desconectarse </button>
-
-
-        </div>
+       
         <div class="titulo">Noticias </div>
         <div class="noticia">
-            <marquee direction="up" scrolldelay="150">
+            <marquee direction="up">
                 <div id="noti" >
                 </div>
             </marquee>
         </div>
-
-
-
-        <div name="editar_noti">
-            <button class="boton" type="button" onclick="agregar_noticia()">Añadir noticia</button>
-
-        </div>
-        <div name="configuracion" <?php
-        if ($grupo != "admin") {
-            echo ' style="display: none;"';
-        }
-        ?>>
-            <button class="boton" type="button" onclick="inicio()">Configuracion</button>
-
-        </div>
-
-        <div >
-            <img src="imagenes/logoIESAguadulce.gif">
+        <div id="logo" >
+            <a title="Configuracion" href="config.php"> <img src="imagenes/logoIESAguadulce.gif"></a>
         </div>
 
 

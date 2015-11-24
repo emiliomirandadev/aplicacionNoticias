@@ -9,11 +9,40 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .animacion {
+                display:block;
+                width:auto;
+                height:40px;
+                position:absolute;
+                font-family:georgia, serif;
+                font-size:16px;
+                line-height:40px;
+                float:left;
+                width:auto;
+                color:#000;
+                font-weight:bold;
+                padding:0 10px;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-duration:17s;
+                -webkit-animation-name: scroll;
+            }
+
+            .animacion a {color:#c00;}
+
+            @-webkit-keyframes scroll {
+                0% {left:90%;}
+                100% {left:-100%;}
+            }
+
+            .animacion:hover { -webkit-animation-play-state: paused;}
+        </style>
+
     </head>
     <body>
-        
-    <marquee direction="up" scrolldelay="300">
- ... texto ...
-</marquee>
-</body>
+
+    <div class="animacion">Mi Texto</div>
+
+    </body>
 </html>

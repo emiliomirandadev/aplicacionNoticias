@@ -39,3 +39,17 @@
                 xhttp.open("GET", url, true);
                 xhttp.send();
             }
+            
+            
+            function ModNoticia(id) {
+                
+                var xhttp = new XMLHttpRequest();
+                var url='mod_noticia.php?id='+id;
+                xhttp.onreadystatechange = function () {
+                    if (xhttp.readyState === 4 && xhttp.status === 200) {
+                        document.getElementById("demo").innerHTML = xhttp.responseText;
+                    }
+                };
+                xhttp.open("GET", url, true);
+                xhttp.send();
+            }

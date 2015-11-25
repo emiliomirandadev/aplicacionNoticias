@@ -23,14 +23,14 @@ and open the template in the editor.
     text-align: center;
 }
 .noticia img{
-     
+
     width:30%;
     height: 30%;
 }
 #logo{
 
-      
-  
+
+
 }
 .login{
     background-color: #35aefc;
@@ -82,9 +82,12 @@ body{
 .titulo{
     font-size: 150%;
 }
-
+marquee{
+    height:98%; 
+    width:90%;
+}
 .noti{
-    height: 50%;
+    height: 90%;
 }
 
 .noticia{
@@ -98,11 +101,11 @@ body{
     border:10px solid #b2e2fb;
     padding:30px;
     border-radius: 100px;
-  
+
     padding-top: 3%;
-   
+
     overflow:auto;
-    
+
 
 }
 p{

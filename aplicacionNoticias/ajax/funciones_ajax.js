@@ -28,5 +28,5 @@ function BorrarUsuario(id) {
                 }
             }).done(function (result) {
         $("#demo").html(result);
-    })
+    });
 }

@@ -55,7 +55,7 @@ if(!isset($_SESSION['usuario'])){
     <body>
 
         <div class="noticia"  >
-            <marquee direction="up"> 
+            <marquee direction="up" > 
                  <div  id="noti" ></div>
             </marquee>
            

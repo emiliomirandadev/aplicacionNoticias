@@ -23,8 +23,14 @@ and open the template in the editor.
     text-align: center;
 }
 .noticia img{
+     
     width:30%;
     height: 30%;
+}
+#logo{
+
+      
+  
 }
 .login{
     background-color: #35aefc;
@@ -67,6 +73,7 @@ and open the template in the editor.
     font-size: 14px;
 }
 body{
+    height: 50%;
     background-color: #6ab6ec;  
     font-family: monospace;
     font-weight: bold;
@@ -76,22 +83,26 @@ body{
     font-size: 150%;
 }
 
+.noti{
+    height: 50%;
+}
 
 .noticia{
-
+    position:absolute;
     color:white;
     background-color: #35aefc;
     width:80%;
-    height: 500px;
-    margin:auto;
-    margin-top: 20px;
+    height: 70%;
+    margin-left: 5%;
+    margin-top: 6%;
     border:10px solid #b2e2fb;
     padding:30px;
     border-radius: 100px;
-    text-align: center;
+  
     padding-top: 3%;
-    text-align: justify;
+   
     overflow:auto;
+    
 
 }
 p{

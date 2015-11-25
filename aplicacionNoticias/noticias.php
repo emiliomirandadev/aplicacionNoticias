@@ -35,7 +35,7 @@ if(!isset($_SESSION['usuario'])){
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
         <title>noticias actuales</title>
-        <style>.move {-webkit-animation: anim2 ease-in-out 3s infinite alternate; }
+        <style>.move {-webkit-animation: anim2 ease-in-out 60s infinite ; }
             @-webkit-keyframes anim2
             {
                 from {left: 0px;   -webkit-transform: scale(1.0) rotate(0deg)   }
@@ -54,9 +54,11 @@ if(!isset($_SESSION['usuario'])){
     </head>
     <body>
 
-        <div class="titulo">Noticias </div>
         <div class="noticia"  >
-            <div class="animacion" id="noti" ></div>
+            <marquee direction="up"> 
+                 <div  id="noti" ></div>
+            </marquee>
+           
         </div>
         <div id="logo" >
             <a title="Configuracion" href="config.php"> <img src="imagenes/logoIESAguadulce.gif"></a>

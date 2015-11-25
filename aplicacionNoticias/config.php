@@ -25,13 +25,19 @@ if(!isset($_SESSION['usuario'])){
             function agregar_usuario() {
                 window.location.href = "mod_usuario.html";
             }
+            function cerrar_sesion() {
+                <?php
+                session_destroy();
+                ?>
+                window.location = 'login.php'
+            }
         </script> 
     </head>
     <body>
         <div class="menu">
 
             Estas conectado como <?php echo $_SESSION['usuario']; ?>
-            <button onclick="window.location = 'login.php'">desconectarse </button>
+            <button onclick="cerrar_sesion()">desconectarse </button>
 
 
         </div>

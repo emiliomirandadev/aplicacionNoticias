@@ -28,17 +28,4 @@ while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
 }
 
 echo "</table>";
-/*
-    
-    while ($row = $resultado->fetch(PDO::FETCH_ASSOC)) {
-        echo "<tr>";
-        foreach ($row as $key => $value) {
 
-            echo "<td> $value </td> ";
-        }
-
-        echo "<td> <button class='boton_borrar' type='button' onclick='BorrarNoticia()'>".$value['titular']." </button></td>";
-        echo "</tr>";
-    }
-  
-*/

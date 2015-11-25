@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        <title>Administracion de noticias</title>
+        <script language="javascript" src="WYSIWYG/source.js" type="text/javascript"></script>
+
+        <script language="javascript">
+            function inicio() {
+                window.location.href = "noticias.php";
+            }
+            function configuracion() {
+                window.location.href = "config.php";
+            }
+
+        </script> 
+    </head>
+    <body>
+        <div class="menu"></div>
+        <div class="titulo">Añadir usuario </div>
+        <div class="editar_noticia">
+            <fieldset class="edita_noticia">
+                <legend> Añadir Usuario</legend>
+                <form name="add_user" action="insertar_user.php" method="POST"> 
+                    correo:<input type="email" name="correo" required>
+                    contraseña:<input type="password" name="pass" required><br>
+                    Nombre: <input type="text" name="nombre" required>
+                    Apellido:<input type="text" name="apellido" required><br>
+                    Telefono:<input type="number" name="telefono" required><br>
+                    Curso:<input type="text" name="curso" required><br>
+                    Grupo:   <select name="grupo">
+                        <option name="profesor">profesores
+                        </option>
+                        <option name="alumno">alumno
+                        </option>
+                        <option name="administrador">admin
+                        </option>
+                    </select>
+
+
+                    <input type="submit" value="actualizar"> 
+
+                </form>
+            </fieldset>
+        </div>
+        <div id="editar_user">
+            <button class="boton" type="button" onclick="inicio()">Inicio</button>
+            <button class="boton" type="button" onclick="configuracion()">Configuracion</button>
+        </div>
+        <?php
+        ?>
+    </body>
+</html>

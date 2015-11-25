@@ -7,11 +7,14 @@ and open the template in the editor.
 
 <?php
 header("Content-Type: text/html;charset=utf-8");
-session_start();
-if(!isset($_SESSION['usuario'])){
+$usuario = $_COOKIE['conexion_usuario'];
+$grupo = $_COOKIE['conexion_grupo'];
+//$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
+//header("refresh:10; url=$self");
+//include ('funciones/listar_noticias.php');
+if (!isset($_COOKIE['conexion_usuario'])) {
     header('Location: login.php');
 }
-
 ?>
 <html>
     <head>
@@ -54,13 +57,10 @@ if(!isset($_SESSION['usuario'])){
         </script> 
     </head>
     <body>
-       
+
         <div class="titulo">Noticias </div>
-        <div class="noticia">
-            <marquee direction="up">
-                <div id="noti" >
-                </div>
-            </marquee>
+        <div class="noticia"  >
+            <div class="animacion" id="noti" ></div>
         </div>
         <div id="logo" >
             <a title="Configuracion" href="config.php"> <img src="imagenes/logoIESAguadulce.gif"></a>

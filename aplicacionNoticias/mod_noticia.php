@@ -17,7 +17,9 @@ if(!isset($_SESSION['usuario'])){
             function inicio() {
                 window.location.href = "noticias.php";
             }
-           
+            function configuracion() {
+                window.location.href = "config.php";
+            }
         </script> 
     </head>
     <body>
@@ -49,6 +51,7 @@ if(!isset($_SESSION['usuario'])){
         </div>
         <div name="editar_noti">
             <button class="boton" type="button" onclick="inicio()">Inicio</button>
+           
 
         </div>
         <?php

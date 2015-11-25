@@ -75,18 +75,14 @@ body{
 .titulo{
     font-size: 150%;
 }
-.noti{
-    height: 40px;
-}
-marquee{
-      height: 500px;
-}
+
+
 .noticia{
-    
+
     color:white;
     background-color: #35aefc;
     width:80%;
-    
+    height: 500px;
     margin:auto;
     margin-top: 20px;
     border:10px solid #b2e2fb;
@@ -96,7 +92,7 @@ marquee{
     padding-top: 3%;
     text-align: justify;
     overflow:auto;
-    
+
 }
 p{
     margin:50px;
@@ -133,4 +129,30 @@ table.tabla_usuarios,table.tabla_noticias{
     border-radius: 20px;
     text-align: center;
     color: #02ab21;
+}
+.animacion {
+    display:block;
+    width:auto;
+    height:inherit;
+    position:absolute;
+    font-family:georgia, serif;
+    font-size:16px;
+    line-height:40px;
+    float:left;
+    width:inherit;
+    color:white;
+    font-weight:bold;
+    padding:0 10px;
+    animation: moving 5s infinite; 
+    -webkit-animation: moving 5s infinite; 
+    position:relative;
+
+}
+
+.animacion a {color:#c00;}
+
+
+@-webkit-keyframes  moving {
+    from {top: -100%;}
+    to {top: 0%;}
 }

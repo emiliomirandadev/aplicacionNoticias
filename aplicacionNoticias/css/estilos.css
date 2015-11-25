@@ -29,8 +29,8 @@ and open the template in the editor.
 }
 #logo{
 
-
-
+    height: 10%;
+    width: 10%;
 }
 .login{
     background-color: #35aefc;

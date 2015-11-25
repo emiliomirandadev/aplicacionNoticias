@@ -28,7 +28,7 @@ if(!isset($_SESSION['usuario'])){
                 });
 
             }
-            cargarDiv();
+            setInterval('cargarDiv()',1);
         </script>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

@@ -37,11 +37,11 @@ if(!isset($_SESSION['usuario'])){
                     Pendiente <input type="checkbox" name="pendiente" value=true checked><br>
                     Selecciona el grupo al que pertenece
                     <select name="categoria">
-                        <option name="profesor">Profesor
+                        <option name="profesores">Profesor
                         </option>
-                        <option name="alumno">Alumno
+                        <option name="alumnos">Alumno
                         </option>
-                        <option name="administrador">Administrador
+                        <option name="admin">Administrador
                         </option>
                     </select>
                     <input type="submit" value="actualizar"> 

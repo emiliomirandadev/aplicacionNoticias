@@ -1,7 +1,7 @@
 <?php
 
 function conexion() {
-    $hostname = '192.168.50.26';
+    $hostname = 'localhost';
     $database = 'noticias';
 
     $username = 'admin';

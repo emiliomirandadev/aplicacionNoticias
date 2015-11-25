@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <?php
 header("Content-Type: text/html;charset=utf-8");
-$usuario = $_COOKIE['conexion_usuario'];
-$grupo = $_COOKIE['conexion_grupo'];
+session_start();
+if(!isset($_SESSION['usuario'])){
+    header('Location: login.php');
+}
+
 ?>
 <html>
     <head>
@@ -18,7 +21,7 @@ $grupo = $_COOKIE['conexion_grupo'];
     <body>
         <div class="menu">
 
-            Estas conectado como <?php echo $usuario; ?>
+            Estas conectado como <?php echo $_SESSION['usuario']; ?>
             <button onclick="window.location = 'login.php'">desconectarse </button>
 
 
@@ -28,7 +31,7 @@ $grupo = $_COOKIE['conexion_grupo'];
             <button class="boton"  type="button" onclick="inicio()">Inicio</button>
             <button class="boton"  type="button" onclick="loadNoticia()">Noticias</button>
             <div name="configuracion" <?php
-            if ($grupo != "admin") {
+            if ($_SESSION['grupo'] != "admin") {
                 echo ' style="display: none;"';
             }
             ?>>
@@ -39,7 +42,7 @@ $grupo = $_COOKIE['conexion_grupo'];
 
 
             <div name="editar_noti" <?php
-            if ($grupo != "admin") {
+            if ($_SESSION['grupo'] != "admin") {
                 echo ' style="display: none;"';
             }
             ?>>

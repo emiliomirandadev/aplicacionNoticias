@@ -20,13 +20,24 @@ function LoadComprobar() {
 
 function BorrarUsuario(id) {
     var id_us = id;
-            $.ajax({
-                type: "POST",
-                url: "borrar_user.php",
-                data: {
-                    id_usuario: id_us
-                }
-            }).done(function (result) {
+    $.ajax({
+        type: "POST",
+        url: "borrar_user.php",
+        data: {
+            id_usuario: id_us
+        }
+    }).done(function (result) {
         $("#demo").html(result);
+    });
+}
+
+function CerrarSess() {
+    var cerrar = 'cerrar';
+    $.ajax({
+        type: "POST",
+        url: "funciones.php",
+        data: {
+            cerr: cerrar
+        }
     });
 }

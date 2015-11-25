@@ -25,20 +25,17 @@ include "funciones.php";
             function agregar_usuario() {
                 window.location.href = "mod_usuario.html";
             }
+             function bo() {
+                window.location.href = "cierra.php";
+            }
         </script> 
     </head>
     <body>
-        <?php
 
-        function cerrar_sesion() {
-            session_destroy();
-            header('Location: login.php');
-        }
-        ?>
         <div class="menu">
 
             Estas conectado como <?php echo $_SESSION['usuario']; ?>
-            <button onclick="cerrar_sesion()">Desconectarse </button>
+            <button onclick="bo()">Desconectarse </button>
 
 
         </div>

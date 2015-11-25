@@ -6,7 +6,9 @@
  * and open the template in the editor.
  */
 include 'conexion.php';
-
+if(isset($_POST['cerr'])){
+    cerrar_session();
+}
 function buscar_usuario($nombre, $pass) {
     $con = conexion();
     /* La busqueda en la base de datos se realiza de este modo para evitar las inyecciones sql */
@@ -21,3 +23,7 @@ function buscar_usuario($nombre, $pass) {
     }
 }
 
+function cerrar_sesion() {
+    session_destroy();
+    header('Location: login.php');
+}

@@ -2,10 +2,10 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 session_start();
-if(!isset($_SESSION['usuario'])){
+if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
 }
-
+include "funciones.php";
 ?>
 <html>
     <head>
@@ -25,19 +25,20 @@ if(!isset($_SESSION['usuario'])){
             function agregar_usuario() {
                 window.location.href = "mod_usuario.html";
             }
-            function cerrar_sesion() {
-                <?php
-                session_destroy();
-                ?>
-                window.location = 'login.php'
-            }
         </script> 
     </head>
     <body>
+        <?php
+
+        function cerrar_sesion() {
+            session_destroy();
+            header('Location: login.php');
+        }
+        ?>
         <div class="menu">
 
             Estas conectado como <?php echo $_SESSION['usuario']; ?>
-            <button onclick="cerrar_sesion()">desconectarse </button>
+            <button onclick="cerrar_sesion()">Desconectarse </button>
 
 
         </div>

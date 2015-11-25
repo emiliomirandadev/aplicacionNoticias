@@ -7,12 +7,8 @@ and open the template in the editor.
 
 <?php
 header("Content-Type: text/html;charset=utf-8");
-$usuario = $_COOKIE['conexion_usuario'];
-$grupo = $_COOKIE['conexion_grupo'];
-//$self = $_SERVER['PHP_SELF']; //Obtenemos la página en la que nos encontramos
-//header("refresh:10; url=$self");
-//include ('funciones/listar_noticias.php');
-if (!isset($_COOKIE['conexion_usuario'])) {
+session_start();
+if(!isset($_SESSION['usuario'])){
     header('Location: login.php');
 }
 ?>

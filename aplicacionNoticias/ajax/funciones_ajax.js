@@ -41,3 +41,15 @@ function CerrarSess() {
         }
     });
 }
+function cargarDiv()
+{
+    $.ajax({// incio petición
+        type: "POST", //Cuando se haya enviado un formulario
+        url: "listar_noticias.php", //se invoca el archivo infoclientes.php
+        //asigno el campo a la variable de peticion sql
+    }).done(function (result) {												 //recibo el resulta
+        $("#noti").html(result);
+
+    });
+
+}

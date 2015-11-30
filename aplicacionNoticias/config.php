@@ -25,7 +25,7 @@ include "funciones.php";
             function agregar_usuario() {
                 window.location.href = "mod_usuario.html";
             }
-             function bo() {
+            function bo() {
                 window.location.href = "cierra.php";
             }
         </script> 
@@ -40,26 +40,27 @@ include "funciones.php";
 
         </div>
         <header id="cabecera_boton">
-            <button class="boton" type="button" onclick="loadUsuario()">Usuarios</button>
+
             <button class="boton"  type="button" onclick="inicio()">Inicio</button>
-            <button class="boton"  type="button" onclick="loadNoticia()">Noticias</button>
             <div name="configuracion" <?php
             if ($_SESSION['grupo'] != "admin") {
                 echo ' style="display: none;"';
             }
             ?>>
+                <button class="boton" type="button" onclick="loadUsuario()">Usuarios</button>
 
+                <button class="boton"  type="button" onclick="loadNoticia()">Noticias</button>
 
 
             </div>
 
-
+            <button class="boton" type="button" onclick="agregar_noticia()">Añadir noticia</button>
             <div name="editar_noti" <?php
             if ($_SESSION['grupo'] != "admin") {
                 echo ' style="display: none;"';
             }
             ?>>
-                <button class="boton" type="button" onclick="agregar_noticia()">Añadir noticia</button>
+
                 <button class="boton" type="button" onclick="agregar_usuario()">Añadir usuario</button>
 
             </div>

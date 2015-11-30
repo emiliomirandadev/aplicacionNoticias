@@ -34,10 +34,19 @@ if(!isset($_SESSION['usuario'])){
                     Fecha inicio<input type="date" name="fecha_inicio"><br>
                     Fecha final<input type="date" name="fecha_final"><br>
                     <br>
-                    Pendiente <input type="checkbox" name="pendiente" value=true checked><br>
+                    <div name="configuracion" <?php
+            if ($_SESSION['grupo'] != "admin" && $_SESSION['grupo'] != "profesor" ) {
+                echo ' style="display: none;"';
+            }
+            ?>>
+                 Pendiente <input type="checkbox" name="pendiente" value=true checked><br>
+
+            </div>
+                    
+                  
                     Selecciona el grupo al que pertenece
                     <select name="categoria">
-                        <option name="profesores">Profesor
+                        <option name="profesor">Profesor
                         </option>
                         <option name="alumnos">Alumno
                         </option>

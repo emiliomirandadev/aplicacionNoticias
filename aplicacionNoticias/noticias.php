@@ -14,42 +14,23 @@ if(!isset($_SESSION['usuario'])){
 ?>
 <html>
     <head>
+        
         <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="ajax/funciones_ajax.js"></script>
+        <script src="javascript/funciones_JS.js"></script>
         <script>
-            function cargarDiv()
-            {
-                $.ajax({// incio petición
-                    type: "POST", //Cuando se haya enviado un formulario
-                    url: "listar_noticias.php", //se invoca el archivo infoclientes.php
-                    //asigno el campo a la variable de peticion sql
-                }).done(function (result) {												 //recibo el resulta
-                    $("#noti").html(result);
-
-                });
-
-            }
-            setInterval('cargarDiv()',1);
+           cargarDiv();
+           setInterval("cargarDiv()",100);
         </script>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" >
         <link rel="stylesheet" type="text/css" href="css/estilos.css">
         <title>noticias actuales</title>
-        <style>.move {-webkit-animation: anim2 ease-in-out 60s infinite ; }
-            @-webkit-keyframes anim2
-            {
-                from {left: 0px;   -webkit-transform: scale(1.0) rotate(0deg)   }
-                50%  {left: 250px; -webkit-transform: scale(0.8) rotate(10deg)  }
-                to   {left: 500px; -webkit-transform: scale(1.2) rotate(-20deg) }
-            }</style>
+        <style></style>
 
         <script language="javascript">
-            function inicio() {
-                window.location.href = "config.php";
-            }
-            function agregar_noticia() {
-                window.location.href = "mod_noticia.php";
-            }
+           
         </script> 
     </head>
     <body>
@@ -66,6 +47,6 @@ if(!isset($_SESSION['usuario'])){
 
 
     </div>
-    <?php ?>
+   
 </body>
 </html>

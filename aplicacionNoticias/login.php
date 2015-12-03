@@ -20,12 +20,16 @@ and open the template in the editor.
                     data: {nomusu: usuario, nomcon: contrasenya}													    //asigno el campo a la variable de peticion sql
                 }).done(function (result) {												 //recibo el resulta
                     $("#demo").html(result);
-                    
+
                 });
             }</script>
     </head>
     <body>
-
+        <?php
+        session_start();
+        if (isset($_SESSION['usuario']))
+            header('Location: noticias.php');
+        ?>
 
         <div class="login">
             <p>
@@ -37,7 +41,7 @@ and open the template in the editor.
 
         </div>
         <div id="demo"></div>
-    
+
         <?php
 //        include 'funciones/funciones.php';
 //        if (isset($_REQUEST['usuario']) && isset($_REQUEST['contrasenya'])) {

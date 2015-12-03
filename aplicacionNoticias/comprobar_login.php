@@ -1,7 +1,7 @@
 <?php
 
 include ('funciones.php');
-$usuario = $_POST['nomusu'];
+$usuario = htmlspecialchars($_POST['nomusu']); // cambia los caracteres especiales en entidades HTML
 $pass = $_POST['nomcon'];
 $pass_cifrada = md5($pass);
 $con = conexion();
@@ -15,7 +15,7 @@ $nr = $resultado->rowCount();
 if ($nr == 1) {
     foreach ($resultado as $key => $value) {
         $grupo = $value['grupo'];
-        
+    
     }
     echo "<div class=\"usu_corre\">Redirigiendo la página...</div>";
     //session_start();

@@ -1,10 +1,9 @@
 <?php
 header("Content-Type: text/html;charset=utf-8");
 session_start();
-if(!isset($_SESSION['usuario'])){
+if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
 }
-
 ?>
 <html>
     <head>
@@ -35,22 +34,18 @@ if(!isset($_SESSION['usuario'])){
                     Fecha final<input type="date" name="fecha_final"><br>
                     <br>
                     <div name="configuracion" <?php
-            if ($_SESSION['grupo'] != "admin" && $_SESSION['grupo'] != "profesor" ) {
-                echo ' style="display: none;"';
-            }
-            ?>>
-                 Pendiente <input type="checkbox" name="pendiente" value=true checked><br>
+if ($_SESSION['grupo'] != "admin" && $_SESSION['grupo'] != "profesor") {
+    echo ' style="display: none;"';
+}
+?>>
+                        Pendiente <input type="checkbox" name="pendiente" value=true checked><br>
 
-            </div>
-                    
-                  
+                    </div>                
                     Selecciona el grupo al que pertenece
                     <select name="categoria">
-                        <option name="profesor">Profesor
-                        </option>
                         <option name="alumnos">Alumno
                         </option>
-                        <option name="admin">Administrador
+                        <option name="profesor">Profesor
                         </option>
                     </select>
                     <input type="submit" value="actualizar"> 
@@ -60,7 +55,7 @@ if(!isset($_SESSION['usuario'])){
         </div>
         <div name="editar_noti">
             <button class="boton" type="button" onclick="inicio()">Inicio</button>
-           
+
 
         </div>
         <?php

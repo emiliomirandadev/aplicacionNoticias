@@ -10,13 +10,10 @@ $query = ("SELECT correo, passwd,grupo FROM usuario  WHERE correo = '$usuario' a
 $resultado = $con->query($query);
 $nr = $resultado->rowCount();
 
-
-
 if ($nr == 1) {
-    foreach ($resultado as $key => $value) {
-        $grupo = $value['grupo'];
+    $row = $resultado->fetch(PDO::FETCH_ASSOC);
+    $gupo = $row['grupo'];
     
-    }
     echo "<div class=\"usu_corre\">Redirigiendo la página...</div>";
     //session_start();
     // $_SESSION['usuario'] = $usuario;
@@ -26,7 +23,7 @@ if ($nr == 1) {
     session_start();
     $_SESSION['usuario'] = $usuario;
     $_SESSION['clave'] = $pass;
-    $_SESSION['grupo']=$grupo;
+    $_SESSION['grupo'] = $grupo;
     ?>
     <script>document.location.href = 'noticias.php';</script>
     <?php
@@ -35,14 +32,3 @@ if ($nr == 1) {
     echo "<div class=\"usu_error\">El usuario o contraseña no es correcto</div>";
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-

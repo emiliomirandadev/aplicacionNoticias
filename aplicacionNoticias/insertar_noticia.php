@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 include 'conexion.php';
-$con=  conexion();
+$con=conexion();
 $titulo=$_POST['titular'];
 $cuerpo=$_POST['cuerpo'];
 $f_ini=$_POST['fecha_inicio'];
@@ -16,6 +16,6 @@ $categoria=$_POST['categoria'];
 $autor=$_COOKIE['conexion_usuario'];
 $insertar ="insert into noticia (titular,cuerpo,fecha_i,fecha_f,autor,pendiente,categoria) values('$titulo','$cuerpo','$f_ini','$f_fin','$autor','$pendiente','$categoria')";
 
-echo $insertar;
+//echo $insertar;
 $resultado=$con->query($insertar);
 header('Location: mod_noticia.php');

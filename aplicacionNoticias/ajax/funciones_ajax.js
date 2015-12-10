@@ -12,7 +12,7 @@ function LoadComprobar() {
         type: "POST", //Cuando se haya enviado un formulario
         url: "comprobar_login.php", //se invoca el archivo infoclientes.php
         data: {nomusu: usuario, nomcon: contrasenya}													    //asigno el campo a la variable de peticion sql
-    }).done(function (result) {												 //recibo el resulta
+    }).done(function (result) {		 //recibo el resulta
         $("#demo").html(result);
 
     });
@@ -47,7 +47,7 @@ function cargarDiv()
         type: "POST", //Cuando se haya enviado un formulario
         url: "listar_noticias.php", //se invoca el archivo infoclientes.php
         //asigno el campo a la variable de peticion sql
-    }).done(function (result) {												 //recibo el resulta
+    }).done(function (result) {		 //recibo el resulta
         $("#noti").html(result);
 
     });

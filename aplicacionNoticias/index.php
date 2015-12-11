@@ -1,7 +1,8 @@
 <?php
-session_start();
-if(!isset($_SESSION['usuario'])){
+if(!isset($_COOKIE['conexion_usuario'])){
     header('Location: login.php');
-} else
+} else{
+    
     header ('Location: noticias.php');
+}
 ?>

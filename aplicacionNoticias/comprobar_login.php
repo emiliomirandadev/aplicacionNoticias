@@ -20,10 +20,8 @@ if ($nr == 1) {
     //$_SESSION['clave'] = $pass;
     setcookie("conexion_usuario", $usuario, time() + 3600, "/");
     setcookie("conexion_grupo", $grupo, time() + 3600, "/");
-    session_start();
-    $_SESSION['usuario'] = $usuario;
-    $_SESSION['clave'] = $pass;
-    $_SESSION['grupo'] = $grupo;
+    estableceSesion();
+    //$_SESSION['clave'] = $pass; Esto no se utiliza en ninguna parte del codigo
     ?>
     <script>document.location.href = 'noticias.php';</script>
     <?php

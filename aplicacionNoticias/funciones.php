@@ -27,3 +27,9 @@ function cerrar_sesion() {
     session_destroy();
     header('Location: login.php');
 }
+
+function estableceSesion(){
+    session_start();
+    $_SESSION['usuario'] = $_COOKIE["conexion_usuario"];
+    $_SESSION['grupo'] = $_COOKIE["conexion_grupo"];
+}

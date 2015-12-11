@@ -16,7 +16,7 @@ if ($nr == 1) {
     
     echo "<div class=\"usu_corre\">Redirigiendo la página...</div>";
     //session_start();
-    // $_SESSION['usuario'] = $usuario;
+    //$_SESSION['usuario'] = $usuario;
     //$_SESSION['clave'] = $pass;
     setcookie("conexion_usuario", $usuario, time() + 3600, "/");
     setcookie("conexion_grupo", $grupo, time() + 3600, "/");

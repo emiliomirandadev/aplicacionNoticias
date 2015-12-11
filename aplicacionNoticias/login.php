@@ -26,8 +26,9 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        session_start();
-        if (isset($_SESSION['usuario']))
+        include ('funciones.php');
+        if (isset($_COOKIE['conexion_usuario']))
+            estableceSesion();
             header('Location: noticias.php');
         ?>
 
